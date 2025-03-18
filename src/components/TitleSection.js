@@ -1,23 +1,25 @@
 import React from "react";
-import { Heading, Section, Container, Text, } from "@react-email/components";
+import { Heading, Section, Container, Text } from "@react-email/components";
 
-const TitleSection = () => {
+function TitleSection() {
   return (
-    <Section style={body}>
-      <Container style={container}>
-        <Heading style={title__h1}>
-          Skyrora Newsletter: Quarter 2-4, 2024 in Review
-        </Heading>
-        <Text style={subtitle}>
-          A close look at the work carried out by Skyrora over the last few months
-        </Text>
-      </Container>
-    </Section>
+    <>
+      <Section style={body}>
+        <Container style={container}>
+          <Heading style={title__h1}>
+            Skyrora Newsletter: Quarter 2-4, 2024 in Review
+          </Heading>
+          <Text style={subtitle}>
+            A close look at the work carried out by Skyrora over the last few months
+          </Text>
+        </Container>
+      </Section>
+    </>
   );
-};
+}
 
 const body = {
-  backgroundColor: "#F5F5F5",
+  backgroundColor: "#181B24",
   padding: "20px",
   display: "flex",
   justifyContent: "center",
@@ -26,9 +28,7 @@ const body = {
 const container = {
   maxWidth: "640px",
   backgroundColor: "#fff",
-  padding: "24px 48px",
-  borderRadius: "8px",
-  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+  padding: "24px 48px"
 };
 
 const title__h1 = {
