@@ -5,12 +5,15 @@ import TitleSection from "./components/TitleSection";
 import EmailTemplate from "./components/EmailTemplate";
 
 function App() {
+  console.log("App rendered"); // Перевірка, чи рендериться App.js
+
   return (
-    <div className="App">
+    <>
       <Header />
       <TitleSection />
       <EmailTemplate />
-    </div>
+      <EmailTemplate />
+    </>
   );
 }
 
