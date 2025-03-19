@@ -1,8 +1,8 @@
 const Menu = () => {
     const menuItems = [
-        { id: 1, text: "terms of use", link: "/" },
-        { id: 2, text: "privacy policy", link: "/about" },
-        { id: 3, text: "unsubscribe", link: "/contact" },
+        { id: 1, text: "terms of use", link: "/#" },
+        { id: 2, text: "privacy policy", link: "/#" },
+        { id: 3, text: "unsubscribe", link: "/#" },
     ];
     const menuList = {
         display: "flex",
