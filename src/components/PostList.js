@@ -20,12 +20,6 @@ const container = {
   padding: "0px 48px",
 };
 
-const firstContainer = {
-  maxWidth: "640px",
-  backgroundColor: "#fff",
-  padding: "0px 48px",
-};
-
 const divider = {
   border: "none",
   borderTop: "1px solid #B8BDCC",
@@ -49,7 +43,7 @@ function PostList() {
   return (
     <>
       <Section style={section}>
-        <Container style={firstContainer}>
+        <Container style={container}>
           <PostImage src="images/image-1.png" alt="Post image" />
           <div style={textWrapper}>
             <Typography variant="h3" style={titleH3}>
@@ -102,7 +96,7 @@ function PostList() {
               First stage tank progress
             </Typography>
             <Typography variant="p" modifiers={["textFirst"]}>
-            In the battle against coronavirus, we have re-structured our
+              In the battle against coronavirus, we have re-structured our
               manufacturing division and allocated engineering personnel to
               start producing face visors using 3D printing facilities and
               producing hand sanitiser according to the World Health
