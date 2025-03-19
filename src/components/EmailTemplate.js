@@ -15,7 +15,8 @@ const section = {
 const container = {
   maxWidth: "640px",
   backgroundColor: "#fff",
-  padding: "24px 48px",
+  padding: "0px 48px",
+
 };
 const firstContainer = {
   maxWidth: "640px",
@@ -52,6 +53,7 @@ const text = {
   fontSize: "16px",
   lineHeight: "100%",
   marginBottom: "30px",
+
 };
 
 const textFirst = {
@@ -80,6 +82,7 @@ const divider = {
   border: "none",
   borderTop: "1px solid #B8BDCC",
   padding: "16px 0",
+  margin: "4px",
 };
 
 function EmailTemplate() {
@@ -171,8 +174,9 @@ function EmailTemplate() {
               producing hand sanitiser according to the World Health
               Organisation’s Guidelines.
             </Text>
-            <button style={buttonStyle}>More News</button>
+
           </div>
+          <button style={buttonStyle}>More News</button>
         </Container>
       </Section>
     </>

@@ -1,5 +1,6 @@
 import React from "react";
-import { Heading, Section, Container, Text } from "@react-email/components";
+import { Heading, Section, Container as Container, Text } from "@react-email/components";
+
 
 function TitleSection() {
   return (
@@ -19,7 +20,6 @@ function TitleSection() {
 
 const section = {
   backgroundColor: "#181B24",
-  // padding: "20px 0",
 };
 
 const container = {
@@ -36,7 +36,6 @@ const title__h1 = {
   textTransform: "uppercase",
   margin: "0px",
   marginBottom: "12px",
-
 };
 
 const subtitle = {
