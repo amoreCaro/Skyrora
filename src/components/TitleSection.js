@@ -20,7 +20,7 @@ function TitleSection() {
 
 const body = {
   backgroundColor: "#181B24",
-  padding: "20px",
+  // padding: "20px",
   display: "flex",
   justifyContent: "center",
 };

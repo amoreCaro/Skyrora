@@ -10,7 +10,6 @@ function App() {
       <Header />
       <TitleSection />
       <EmailTemplate />
-      <EmailTemplate />
     </>
   );
 }
