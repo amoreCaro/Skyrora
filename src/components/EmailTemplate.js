@@ -7,10 +7,15 @@ import {
   Img,
 } from "@react-email/components";
 
+const buttonWrapper = {
+  paddingBottom: "64px"
+};
 const section = {
   backgroundColor: "#181B24",
   padding: "0px 48px",
 };
+
+
 
 const container = {
   maxWidth: "640px",
@@ -176,7 +181,9 @@ function EmailTemplate() {
             </Text>
 
           </div>
-          <button style={buttonStyle}>More News</button>
+          <div style={buttonWrapper}>
+            <button style={buttonStyle}>More News</button>
+          </div>
         </Container>
       </Section>
     </>
