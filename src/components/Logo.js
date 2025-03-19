@@ -1,7 +1,11 @@
+import { useMediaQuery } from "react-responsive";
+
 const Logo = () => {
+    const isMobile = useMediaQuery({ maxWidth: 320 });
+
     const logo = {
-        minWidth: "114px",
-        height: "60px",
+        maxWidth: isMobile ? "84px" : "114px",
+        height: isMobile ? "44px" : "60px",
         cursor: "pointer"
     };
     const logoSvg = {

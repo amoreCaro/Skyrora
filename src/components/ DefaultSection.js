@@ -1,14 +1,11 @@
-const DefaultSection = ({ children }) => {
+import React from "react";
+
+export default function DefaultSection({ children }) {
     const defaultSection = {
         marginTop: "0px",
-        marginBottom: "24px"
+        marginBottom: "0px",
+        background: "#181B24"
     };
-    
-    return (
-        <section style={defaultSection}>
-            {children}
-        </section>
-    );
-};
 
-export default DefaultSection;
+    return <section style={defaultSection}>{children}</section>;
+}
