@@ -1,8 +1,5 @@
 import React from "react";
 import {
-  Html,
-  Head,
-  Body,
   Section,
   Container,
   Heading,
@@ -19,6 +16,11 @@ const container = {
   maxWidth: "640px",
   backgroundColor: "#fff",
   padding: "24px 48px",
+};
+const firstContainer = {
+  maxWidth: "640px",
+  backgroundColor: "#fff",
+  padding: "0px 48px",
 };
 
 const imageWrapper = {
@@ -63,7 +65,7 @@ const textLast = {
 };
 
 const buttonStyle = {
-  backgroundColor: "#164BDC", // Adjust based on your theme
+  backgroundColor: "#164BDC",
   color: "#FFFFFF",
   padding: "16px 80px",
   border: "none",
@@ -80,12 +82,11 @@ const divider = {
   padding: "16px 0",
 };
 
-
 function EmailTemplate() {
   return (
     <>
       <Section style={section}>
-        <Container style={container}>
+        <Container style={firstContainer}>
           <div style={imageWrapper}>
             <Img
               src="images/image-1.png"
@@ -141,7 +142,13 @@ function EmailTemplate() {
           </div>
           <div style={textWrapper}>
             <Heading style={titleH3}>First stage tank progress</Heading>
-            <Text style={textFirst}>In the battle against coronavirus, we have re-structured our manufacturing division and allocated engineering personnel to start producing face visors using 3D printing facilities and producing hand sanitiser according to the World Health Organisation’s Guidelines.</Text>
+            <Text style={textFirst}>
+              In the battle against coronavirus, we have re-structured our
+              manufacturing division and allocated engineering personnel to
+              start producing face visors using 3D printing facilities and
+              producing hand sanitiser according to the World Health
+              Organisation’s Guidelines.
+            </Text>
           </div>
           <hr style={divider} />
         </Container>
@@ -158,13 +165,16 @@ function EmailTemplate() {
           <div style={textWrapper}>
             <Heading style={titleH3}>Engine testing and facility upgrades</Heading>
             <Text style={textFirst}>
-              In the battle against coronavirus, we have re-structured our manufacturing division and allocated engineering personnel to start producing face visors using 3D printing facilities and producing hand sanitiser according to the World Health Organisation’s Guidelines.
+              In the battle against coronavirus, we have re-structured our
+              manufacturing division and allocated engineering personnel to
+              start producing face visors using 3D printing facilities and
+              producing hand sanitiser according to the World Health
+              Organisation’s Guidelines.
             </Text>
             <button style={buttonStyle}>More News</button>
           </div>
         </Container>
       </Section>
-
     </>
   );
 }

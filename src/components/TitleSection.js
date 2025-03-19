@@ -3,32 +3,29 @@ import { Heading, Section, Container, Text } from "@react-email/components";
 
 function TitleSection() {
   return (
-    <>
-      <Section style={body}>
-        <Container style={container}>
-          <Heading style={title__h1}>
-            Skyrora Newsletter: Quarter 2-4, 2024 in Review
-          </Heading>
-          <Text style={subtitle}>
-            A close look at the work carried out by Skyrora over the last few months
-          </Text>
-        </Container>
-      </Section>
-    </>
+    <Section style={section}>
+      <Container style={container}>
+        <Heading style={title__h1}>
+          Skyrora Newsletter:  <br />
+          Quarter 2-4, 2024 in Review
+        </Heading>
+        <Text style={subtitle}>
+          A close look at the work carried out by Skyrora over the last few months
+        </Text>
+      </Container>
+    </Section>
   );
 }
 
-const body = {
+const section = {
   backgroundColor: "#181B24",
-  // padding: "20px",
-  display: "flex",
-  justifyContent: "center",
+  // padding: "20px 0",
 };
 
 const container = {
   maxWidth: "640px",
   backgroundColor: "#fff",
-  padding: "24px 48px"
+  padding: "48px",
 };
 
 const title__h1 = {
@@ -37,6 +34,9 @@ const title__h1 = {
   fontSize: "26px",
   lineHeight: "120%",
   textTransform: "uppercase",
+  margin: "0px",
+  marginBottom: "12px",
+
 };
 
 const subtitle = {
@@ -44,6 +44,7 @@ const subtitle = {
   fontWeight: "400",
   fontSize: "18px",
   lineHeight: "150%",
+  marginBottom: "0px",
 };
 
 export default TitleSection;
