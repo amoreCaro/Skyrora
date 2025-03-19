@@ -2,6 +2,7 @@ const Logo = () => {
     const logo = {
         minWidth: "114px",
         height: "60px",
+        cursor: "pointer"
     };
     const logoSvg = {
         display: "block",

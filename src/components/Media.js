@@ -7,16 +7,19 @@ const Media = () => {
     const media = {
         display: "flex",
         justifyContent: "center",
+        alignItems: "center",
         gap: "16px",
     };
     
     const mediaItem = {
-        maxWidth: "48px",
-        height: "48px",
+        width: "48px",  
+        height: "48px", 
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         overflow: "hidden",
+        cursor: "pointer",
+        flexShrink: 0, 
     };
     
     const mediaSvg = (index) => ({
@@ -24,8 +27,9 @@ const Media = () => {
         height: "100%",
         fill: hovered === index ? "#164BDC" : "white",
         transition: "fill 0.3s ease",
-        objectFit: "contain", // Use "cover" if you want it to fill completely
-    });    
+        objectFit: "contain",
+    });
+    
 
     const svgs = [
         // Instagram
