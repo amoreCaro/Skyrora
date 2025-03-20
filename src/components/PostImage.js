@@ -1,6 +1,11 @@
+
+import { useMediaQuery } from "react-responsive";
 const PostImage = ({ src, alt }) => {
+    const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
+
     const imageWrapper = {
-        maxWidth: "544px",
+        maxWidth: isMobile ? "280px" : "544px",
+        width: "100%",
         objectFit: "cover",
     };
 
