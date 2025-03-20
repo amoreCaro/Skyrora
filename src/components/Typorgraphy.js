@@ -1,4 +1,4 @@
-const Typography = ({ variant = "p", children, style = {}, modifiers = [] }) => {
+export default function Typography({ variant = "p", children, style = {}, modifiers = [] }) {
     const Tag = variant;
 
     const baseText = {
@@ -53,6 +53,4 @@ const Typography = ({ variant = "p", children, style = {}, modifiers = [] }) => 
     };
 
     return <Tag style={appliedStyles}>{children}</Tag>;
-};
-
-export default Typography;
+}

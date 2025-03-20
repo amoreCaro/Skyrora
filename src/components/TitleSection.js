@@ -1,14 +1,14 @@
 import React from "react";
-import { Heading, Section, Container as Container, Text } from "@react-email/components";
+import { Heading, Container, Text } from "@react-email/components";
 import DefaultSection from "./ DefaultSection";
 import { useMediaQuery } from "react-responsive";
 
-
 export default function TitleSection() {
-  const isMobile = useMediaQuery({ maxWidth: 320 });
+  const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
 
   const container = {
-    maxWidth: "640px",
+    maxWidth: isMobile ? "320px" : "640px",
+    width: "100%",
     backgroundColor: "#fff",
     padding: isMobile ? "32px 12px 16px 12px" : "48px",
   };
@@ -19,8 +19,7 @@ export default function TitleSection() {
     fontSize: isMobile ? "21px" : "26px",
     lineHeight: "120%",
     textTransform: "uppercase",
-    margin: "0px",
-    marginBottom: "12px",
+    margin: "0px 0px 12px 0px",
   };
 
   const subtitle = {
@@ -28,14 +27,15 @@ export default function TitleSection() {
     fontWeight: "400",
     fontSize: "18px",
     lineHeight: "150%",
-    marginBottom: "0px",
+    margin: "0px",
   };
 
   return (
     <DefaultSection>
       <Container style={container}>
         <Heading style={title__h1}>
-          Skyrora Newsletter:  <br />
+          Skyrora Newsletter:  
+          <br />
           Quarter 2-4, 2024 in Review
         </Heading>
         <Text style={subtitle}>
