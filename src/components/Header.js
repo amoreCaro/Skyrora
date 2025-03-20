@@ -11,6 +11,7 @@ export default function Header() {
         backgroundColor: "#181B24",
         color: "#fff",
         padding: isMobile ? "8px" : "25px 32px",
+        paddingBottom: "0px",
         fontFamily: "Bai Jamjuree, sans-serif",
         display: "flex",
         justifyContent: "center",

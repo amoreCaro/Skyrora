@@ -5,6 +5,7 @@ const Logo = () => {
 
     const logo = {
         maxWidth: isMobile ? "84px" : "114px",
+        width: "100%",
         height: isMobile ? "44px" : "60px",
         cursor: "pointer"
     };

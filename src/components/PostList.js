@@ -6,7 +6,6 @@ import PostImage from "./PostImage";
 import Typography from "./Typorgraphy";
 import DefaultSection from "./ DefaultSection";
 
-
 export default function PostList() {
 
 const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
