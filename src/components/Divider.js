@@ -8,10 +8,11 @@ export default function Divider({ style = {} }) {
         border: "none",
         borderTop: "1px solid #B8BDCC",
         width: "100%",
-        padding: isMobile ? "12px 0px" : "16px 0px",
+        padding: isMobile ? "12px 0px" : "40px 0px",
         display: "block",
         margin: "0 auto",
-        ...(isMobile && { transform: "translateY(50%)" }),
+        transform: "translateY(50%)",
+        // ...(isMobile && { }),
         ...style,
     };
 

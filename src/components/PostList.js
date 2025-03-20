@@ -17,14 +17,18 @@ export default function PostList() {
   const container = {
     maxWidth: "640px",
     backgroundColor: "#fff",
-    padding: isMobile ? "16px 12px" : "0px 48px",
-    display:"flex",
+    padding: isMobile ? "16px 12px" : "24px 48px",
+    display: "flex",
     justifyContent: "center",
+  };
+  const firstContainer = {
+    ...container,
+    padding: isMobile ? "18px 12px" : "0px 12px",
   };
   const lastContainer = {
     ...container,
-    padding: isMobile ? "32px 12px" : "44px 12px",
-};
+    padding: isMobile ? "32px 12px" : "0px 12px 44px 12px",
+  };
 
   const content = {
     maxWidth: "544px",
@@ -46,7 +50,7 @@ export default function PostList() {
   return (
     <>
       <DefaultSection>
-        <Container style={container}>
+        <Container style={firstContainer}>
           <div style={content}>
             <PostImage src="images/image-1.png" alt="Post image" />
             <div style={textWrapper}>

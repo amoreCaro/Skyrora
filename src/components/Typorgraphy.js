@@ -30,7 +30,7 @@ export default function Typography({ variant = "p", children, style = {} }) {
         }
     }, [variant]);
     const baseText = {
-        fontFamily: "Bai Jamjuree, sans-serif", // Додано шрифт
+        fontFamily: "Bai Jamjuree, sans-serif", 
         color: "#181B24",
         fontWeight: "400",
         fontSize: isMobile ? "14px" : "16px",
@@ -40,7 +40,7 @@ export default function Typography({ variant = "p", children, style = {} }) {
     
     const styles = {
         h1: {
-            fontFamily: "Bai Jamjuree, sans-serif", // Додано шрифт
+            fontFamily: "Bai Jamjuree, sans-serif",
             color: "#0E0F17",
             fontWeight: "700",
             fontSize: isMobile ? "21px" : "26px",
@@ -49,7 +49,7 @@ export default function Typography({ variant = "p", children, style = {} }) {
             margin: "0px 0px 12px 0px",
         },
         h3: {
-            fontFamily: "Bai Jamjuree, sans-serif", // Додано шрифт
+            fontFamily: "Bai Jamjuree, sans-serif", 
             color: "#181B24",
             fontWeight: isMobile ? "600" : "700",
             fontSize: isMobile ? "16px" : "21px",
