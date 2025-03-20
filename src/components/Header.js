@@ -7,14 +7,17 @@ export default function Header() {
     const isMobile = useMediaQuery({ maxWidth: 320 });
 
     const header = {
-        height: isMobile ? "76px" : "112px",
+        // height: isMobile ? "76px" : "112px",
         backgroundColor: "#181B24",
         color: "#fff",
-        padding: isMobile ? "8px" : "25px 32px",
+
         paddingBottom: "0px",
         fontFamily: "Bai Jamjuree, sans-serif",
         display: "flex",
         justifyContent: "center",
+
+
+        padding: isMobile ? "24px 8px 16px 8px" : "20px 32px 8px",
     };
 
     const headerContainer = {
@@ -24,7 +27,8 @@ export default function Header() {
         flexDirection: "row",
         maxWidth: isMobile ? "304px" : "640px",
         width: "100%",
-    };
+        paddingBottom: isMobile ? "0px" : "24px"
+    }
 
     return (
         <header style={header}>

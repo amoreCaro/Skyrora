@@ -7,7 +7,7 @@ const PostImage = ({ src, alt }) => {
         maxWidth: isMobile ? "280px" : "544px",
         width: "100%",
         height: isMobile ? "147px" : "285px",
-        
+        margin: "0 auto"
     };
     
     const imageStyle = {

@@ -11,7 +11,6 @@ export default function PostList() {
   const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
 
   const buttonWrapper = {
-    // paddingBottom: isMobile ? "32px" : "64px",
     marginTop: isMobile ? "26px" : "0px",
   };
 
@@ -19,10 +18,17 @@ export default function PostList() {
     maxWidth: "640px",
     backgroundColor: "#fff",
     padding: isMobile ? "16px 12px" : "0px 48px",
+    display:"flex",
+    justifyContent: "center",
   };
+  const lastContainer = {
+    ...container,
+    padding: isMobile ? "32px 12px" : "44px 12px",
+};
 
   const content = {
-    margin: isMobile ? " 0px" : "44px 0px"
+    maxWidth: "544px",
+    width: "100%"
   };
 
   const textWrapper = {
@@ -108,7 +114,7 @@ export default function PostList() {
       </DefaultSection>
 
       <DefaultSection>
-        <Container style={container}>
+        <Container style={lastContainer}>
           <div style={content}>
             <PostImage src="images/image-3.png" alt="Post image" />
             <div style={textWrapper}>

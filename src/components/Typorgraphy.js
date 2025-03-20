@@ -29,17 +29,18 @@ export default function Typography({ variant = "p", children, style = {} }) {
             setPosition("textMiddle");
         }
     }, [variant]);
-
     const baseText = {
+        fontFamily: "Bai Jamjuree, sans-serif", // Додано шрифт
         color: "#181B24",
         fontWeight: "400",
         fontSize: isMobile ? "14px" : "16px",
         lineHeight: "100%",
         marginBottom: "24px",
     };
-
+    
     const styles = {
         h1: {
+            fontFamily: "Bai Jamjuree, sans-serif", // Додано шрифт
             color: "#0E0F17",
             fontWeight: "700",
             fontSize: isMobile ? "21px" : "26px",
@@ -48,6 +49,7 @@ export default function Typography({ variant = "p", children, style = {} }) {
             margin: "0px 0px 12px 0px",
         },
         h3: {
+            fontFamily: "Bai Jamjuree, sans-serif", // Додано шрифт
             color: "#181B24",
             fontWeight: isMobile ? "600" : "700",
             fontSize: isMobile ? "16px" : "21px",
@@ -62,6 +64,7 @@ export default function Typography({ variant = "p", children, style = {} }) {
             ...baseText,
         },
         subtitle: {
+            fontFamily: "Bai Jamjuree, sans-serif", // Додано шрифт
             color: "#0E0F17",
             fontWeight: "400",
             fontSize: isMobile ? "16px" : "18px",
@@ -69,6 +72,7 @@ export default function Typography({ variant = "p", children, style = {} }) {
             marginBottom: "0px",
         },
     };
+    
 
     const positionStyles = {
         textFirst: { marginTop: "20px", marginBottom: "16px" },
