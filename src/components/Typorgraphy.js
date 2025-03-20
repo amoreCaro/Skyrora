@@ -7,7 +7,7 @@ export default function Typography({ variant = "p", children, style = {}, modifi
     const baseText = {
         color: "#181B24",
         fontWeight: "400",
-        fontSize: "16px",
+        fontSize: isMobile ? "14px" : "16px",
         lineHeight: "100%",
         marginBottom: "24px",
     };
@@ -23,8 +23,8 @@ export default function Typography({ variant = "p", children, style = {}, modifi
         },
         h3: {
             color: "#181B24",
-            fontWeight: "700",
-            fontSize: "21px",
+            fontWeight: isMobile ? "600" : "700",
+            fontSize: isMobile ? "16px" : "21px",
             lineHeight: "120%",
             textTransform: "uppercase",
             margin: "0px",
@@ -38,8 +38,8 @@ export default function Typography({ variant = "p", children, style = {}, modifi
         subtitle: {
             color: "#0E0F17",
             fontWeight: "400",
-            fontSize: "18px",
-            lineHeight: "150%",
+            fontSize: isMobile ? "16px" : "18px",
+            lineHeight: isMobile ? "100%" : "150%",
             marginBottom: "0px",
         },
     };

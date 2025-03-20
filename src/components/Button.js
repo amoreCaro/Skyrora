@@ -26,7 +26,7 @@ const Button = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      Click Me
+      More news
     </button>
   );
 };
