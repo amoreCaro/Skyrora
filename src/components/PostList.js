@@ -12,7 +12,7 @@ export default function PostList() {
 const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
 
 const buttonWrapper = {
-  paddingBottom: "64px",
+  paddingBottom: isMobile ? "48px" : "64px",
 };
 
 const container = {

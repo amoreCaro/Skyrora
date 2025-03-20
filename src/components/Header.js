@@ -7,6 +7,7 @@ export default function Header() {
     const isMobile = useMediaQuery({ maxWidth: 320 });
 
     const header = {
+        height: isMobile ? "76px" : "112px",
         backgroundColor: "#181B24",
         color: "#fff",
         padding: isMobile ? "8px" : "25px 32px",

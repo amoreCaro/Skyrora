@@ -1,14 +1,16 @@
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const Button = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
   const [isHovered, setIsHovered] = useState(false);
 
   const buttonStyle = {
     backgroundColor: isHovered ? "#0F3BAA" : "#164BDC",
     color: "#FFFFFF",
-    maxWidth: "256px",
-    height: "56px",
+    maxWidth: isMobile ? "280px" : "256px",
     width: "100%",
+    height: isMobile ? "48px" : "56px",
     border: "none",
     fontSize: "16px",
     lineHeight: "140%",
