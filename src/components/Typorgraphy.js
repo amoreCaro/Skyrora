@@ -1,5 +1,8 @@
+
+import { useMediaQuery } from "react-responsive";
 export default function Typography({ variant = "p", children, style = {}, modifiers = [] }) {
     const Tag = variant;
+    const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
 
     const baseText = {
         color: "#181B24",
@@ -13,10 +16,10 @@ export default function Typography({ variant = "p", children, style = {}, modifi
         h1: {
             color: "#0E0F17",
             fontWeight: "700",
-            fontSize: "26px",
+            fontSize: isMobile ? "21px" : "26px",
             lineHeight: "120%",
             textTransform: "uppercase",
-            margin: "0px 0 12px 0",
+            margin: "0px 0px 12px 0px",
         },
         h3: {
             color: "#181B24",
