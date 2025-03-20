@@ -16,7 +16,7 @@ const Button = () => {
     lineHeight: "140%",
     textTransform: "uppercase",
     cursor: "pointer",
-    marginTop: "15px",
+    margin: isMobile ? "16px 0px" : "20xp 0px",
     transition: "background-color 0.3s ease, transform 0.2s ease",
   };
 

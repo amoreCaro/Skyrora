@@ -1,8 +1,34 @@
-
+import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-export default function Typography({ variant = "p", children, style = {}, modifiers = [] }) {
+
+export default function Typography({ variant = "p", children, style = {} }) {
     const Tag = variant;
     const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
+
+    const ref = useRef(null);
+    const [position, setPosition] = useState("");
+
+    useEffect(() => {
+        if (variant !== "p" || !ref.current) return;
+
+        const parent = ref.current.parentElement;
+        if (!parent) return;
+
+        const pTags = Array.from(parent.children).filter((el) => el.tagName.toLowerCase() === "p");
+
+        if (pTags.length === 1) {
+            setPosition("textOnly");
+            return;
+        }
+
+        if (pTags[0] === ref.current) {
+            setPosition("textFirst");
+        } else if (pTags[pTags.length - 1] === ref.current) {
+            setPosition("textLast");
+        } else {
+            setPosition("textMiddle");
+        }
+    }, [variant]);
 
     const baseText = {
         color: "#181B24",
@@ -44,16 +70,22 @@ export default function Typography({ variant = "p", children, style = {}, modifi
         },
     };
 
-    const modifierStyles = {
-        textFirst: { marginBottom: "20px" },
-        textLast: { margin: "40px 0px" },
+    const positionStyles = {
+        textFirst: { marginTop: "20px", marginBottom: "16px" },
+        textMiddle: { marginBottom: "16px" },
+        textLast: { marginTop: "40px" },
+        textOnly: { margin: "20px 0px" },
     };
 
     const appliedStyles = {
         ...styles[variant],
-        ...modifiers.reduce((acc, mod) => ({ ...acc, ...modifierStyles[mod] }), {}),
+        ...(positionStyles[position] || {}),
         ...style,
     };
 
-    return <Tag style={appliedStyles}>{children}</Tag>;
+    return (
+        <Tag ref={variant === "p" ? ref : null} style={appliedStyles}>
+            {children}
+        </Tag>
+    );
 }

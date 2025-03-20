@@ -11,7 +11,8 @@ export default function PostList() {
   const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
 
   const buttonWrapper = {
-    paddingBottom: isMobile ? "48px" : "64px",
+    // paddingBottom: isMobile ? "32px" : "64px",
+    marginTop: isMobile ? "26px" : "0px",
   };
 
   const container = {
@@ -21,10 +22,11 @@ export default function PostList() {
   };
 
   const content = {
+    // margin: isMobile ? "32px 0px" : "44px 0px"
   };
 
   const textWrapper = {
-    padding: "24px 0",
+    paddingTop: "24px",
   };
 
   const titleH3 = {
@@ -120,10 +122,11 @@ export default function PostList() {
                 producing hand sanitiser according to the World Health
                 Organisation’s Guidelines.
               </Typography>
+              <div style={buttonWrapper}>
+                <Button />
+              </div>
             </div>
-            <div style={buttonWrapper}>
-              <Button />
-            </div>
+
           </div>
         </Container>
       </DefaultSection>

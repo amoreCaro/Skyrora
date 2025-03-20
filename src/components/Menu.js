@@ -1,4 +1,7 @@
+import React from "react";
+import { useMediaQuery } from "react-responsive";
 const Menu = () => {
+    const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
     const menuItems = [
         { id: 1, text: "terms of use", link: "/#" },
         { id: 2, text: "privacy policy", link: "/#" },
@@ -6,7 +9,11 @@ const Menu = () => {
     ];
     const menuList = {
         display: "flex",
-        gap:"16px"
+        gap: "16px",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "0px"
     };
     const menuItem = {
         listStyle: "none",

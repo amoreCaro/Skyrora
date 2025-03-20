@@ -1,11 +1,13 @@
 import React from "react";
 import Media from "./Media";
 import Menu from "./Menu";
+import { useMediaQuery } from "react-responsive";
 const Footer = () => {
+    const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
     const footer = {
         backgroundColor: "#181B24",
         color: "#fff",
-        padding: "25px 32px",
+        padding: isMobile ? "16px 12px 32px 16px" : "25px 32px 25px 48px",
         fontFamily: "Bai Jamjuree, sans-serif",
         display: "flex",
         justifyContent: "center",
@@ -17,7 +19,7 @@ const Footer = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        flexDirection: "column"
+        flexDirection: "column",
     };
 
     const footerCopyright = {
