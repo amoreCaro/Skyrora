@@ -6,12 +6,12 @@ const PostImage = ({ src, alt }) => {
     const imageWrapper = {
         maxWidth: isMobile ? "280px" : "544px",
         width: "100%",
-        objectFit: "cover",
         height: isMobile ? "147px" : "285px",
-
+        
     };
-
+    
     const imageStyle = {
+        objectFit: "cover",
         width: "100%",
         height: "100%",
     };
