@@ -22,7 +22,7 @@ export default function PostList() {
   };
 
   const content = {
-    // margin: isMobile ? "32px 0px" : "44px 0px"
+    margin: isMobile ? " 0px" : "44px 0px"
   };
 
   const textWrapper = {
