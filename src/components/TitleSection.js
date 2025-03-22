@@ -2,8 +2,8 @@ import React from "react";
 import { Container } from "@react-email/components";
 import DefaultSection from "./DefaultSection";
 import { useMediaQuery } from "react-responsive";
-import Paragraph from "./Paragraph";
-import Heading from "./Heading";
+import Paragraph from "./Paragrph/Paragraph";
+import Heading from "./Heading/Heading";
 
 export default function TitleSection() {
   const isMobile = useMediaQuery({ query: "(max-width: 320px)" });

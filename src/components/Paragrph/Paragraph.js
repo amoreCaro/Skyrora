@@ -1,8 +1,8 @@
 import { useMediaQuery } from "react-responsive";
-import DefaultSection from "./DefaultSection";
+import DefaultSection from "../DefaultSection";
 import React from "react";
 
-function Paragraph({ children, variant = "body", marginTop="16px", marginBottom="16px" }) {
+function Paragraph({ children, variant = "body", marginTop = "16px", marginBottom = "16px" }) {
     const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
 
     const styles = {

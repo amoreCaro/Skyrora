@@ -12,12 +12,12 @@ export default function Divider({ style = {} }) {
         // padding: isMobile ? "12px 0px" : "16px 0px",
         display: "block",
         margin: "0 auto",
-        transform: "translateY(50%)",
+        transform: "translateY(7px)",
         ...style,
     };
 
     return (
-        <DefaultSection marginTop="20px" marginBottom="20px">
+        <DefaultSection marginTop="0px" marginBottom="0px">
             <hr style={dividerStyle} />
         </DefaultSection>
     );
