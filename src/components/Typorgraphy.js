@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
+import  DefaultSection  from "./DefaultSection";
 
 export default function Typography({ variant = "p", children, style = {} }) {
     const Tag = variant;
@@ -28,16 +29,17 @@ export default function Typography({ variant = "p", children, style = {} }) {
         } else {
             setPosition("textMiddle");
         }
-    }, [variant]);
+    }, [variant, ref]);
+
     const baseText = {
-        fontFamily: "Bai Jamjuree, sans-serif", 
+        fontFamily: "Bai Jamjuree, sans-serif",
         color: "#181B24",
         fontWeight: "400",
         fontSize: isMobile ? "14px" : "16px",
         lineHeight: "100%",
         marginBottom: "24px",
     };
-    
+
     const styles = {
         h1: {
             fontFamily: "Bai Jamjuree, sans-serif",
@@ -49,7 +51,7 @@ export default function Typography({ variant = "p", children, style = {} }) {
             margin: "0px 0px 12px 0px",
         },
         h3: {
-            fontFamily: "Bai Jamjuree, sans-serif", 
+            fontFamily: "Bai Jamjuree, sans-serif",
             color: "#181B24",
             fontWeight: isMobile ? "600" : "700",
             fontSize: isMobile ? "16px" : "21px",
@@ -57,14 +59,10 @@ export default function Typography({ variant = "p", children, style = {} }) {
             textTransform: "uppercase",
             margin: "0px",
         },
-        p: {
-            ...baseText,
-        },
-        span: {
-            ...baseText,
-        },
+        p: { ...baseText },
+        span: { ...baseText },
         subtitle: {
-            fontFamily: "Bai Jamjuree, sans-serif", // Додано шрифт
+            fontFamily: "Bai Jamjuree, sans-serif",
             color: "#0E0F17",
             fontWeight: "400",
             fontSize: isMobile ? "16px" : "18px",
@@ -72,7 +70,6 @@ export default function Typography({ variant = "p", children, style = {} }) {
             marginBottom: "0px",
         },
     };
-    
 
     const positionStyles = {
         textFirst: { marginTop: "20px", marginBottom: "16px" },
@@ -88,8 +85,10 @@ export default function Typography({ variant = "p", children, style = {} }) {
     };
 
     return (
-        <Tag ref={variant === "p" ? ref : null} style={appliedStyles}>
-            {children}
-        </Tag>
+        <DefaultSection>
+            <Tag ref={variant === "p" ? ref : null} style={appliedStyles}>
+                {children}
+            </Tag>
+        </DefaultSection>
     );
 }

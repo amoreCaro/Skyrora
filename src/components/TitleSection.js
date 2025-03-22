@@ -1,8 +1,9 @@
 import React from "react";
 import { Container } from "@react-email/components";
-import DefaultSection from "./ DefaultSection";
+import DefaultSection from "./DefaultSection";
 import { useMediaQuery } from "react-responsive";
 import Typography from "./Typorgraphy";
+import Heading from "./Heading";
 
 export default function TitleSection() {
   const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
@@ -17,11 +18,11 @@ export default function TitleSection() {
   return (
     <DefaultSection>
       <Container style={container}>
-        <Typography variant="h1">
-          Skyrora Newsletter:
-          <br />
+
+        <Heading headingType="h1">
+          Skyrora Newsletter:<br />
           Quarter 2-4, 2024 in Review
-        </Typography>
+        </Heading>
         <Typography variant="subtitle">
           A close look at the work carried out by Skyrora over the last few months
         </Typography>

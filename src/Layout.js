@@ -5,15 +5,14 @@ import TitleSection from "./components/TitleSection";
 import PostList from "./components/PostList";
 import Footer from "./components/Footer"; 
 
-function App() {
+export default function Layout() {
   return (
-    <>
+    <wrapper >
+      {/* max width640px mobile 304 use const mobile */}
       <Header />
       <TitleSection />
       <PostList />
       <Footer />
-    </>
+    </wrapper>
   );
 }
-
-export default App;
