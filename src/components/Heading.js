@@ -12,7 +12,7 @@ export default function Heading({ headingType: Tag = 'h1', children }) {
       fontSize: isMobile ? "21px" : "26px",
       lineHeight: "120%",
       textTransform: "uppercase",
-      margin: "0px 0px 12px 0px",
+      margin: "0px",
     },
     h3: {
       fontFamily: "Bai Jamjuree, sans-serif",
@@ -26,7 +26,7 @@ export default function Heading({ headingType: Tag = 'h1', children }) {
   };
 
   return (
-    <DefaultSection marginBottom="medium">
+    <DefaultSection marginBottom="">
       <Tag style={styles[Tag] || { margin: 0 }}>{children}</Tag>
     </DefaultSection>
   );

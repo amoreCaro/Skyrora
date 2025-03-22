@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "@react-email/components";
 import DefaultSection from "./DefaultSection";
 import { useMediaQuery } from "react-responsive";
-import Typography from "./Typorgraphy";
+import Paragraph from "./Paragraph";
 import Heading from "./Heading";
 
 export default function TitleSection() {
@@ -12,20 +12,20 @@ export default function TitleSection() {
     maxWidth: isMobile ? "320px" : "640px",
     width: "100%",
     backgroundColor: "#fff",
-    padding: isMobile ? "32px 12px 16px 12px" : "48px",
+    padding: isMobile ? "32px 12px 16px 12px" : "48px 48px 0px 48px",
   };
 
   return (
-    <DefaultSection>
+    <DefaultSection marginBottom="0px">
       <Container style={container}>
-
-        <Heading headingType="h1">
+        <Heading headingType="h1" marginBottom="20px">
           Skyrora Newsletter:<br />
           Quarter 2-4, 2024 in Review
         </Heading>
-        <Typography variant="subtitle">
+        <Paragraph variant="subtitle" marginBottom="0px">
           A close look at the work carried out by Skyrora over the last few months
-        </Typography>
+        </Paragraph>
+
       </Container>
     </DefaultSection>
   );

@@ -1,4 +1,3 @@
-
 import { useMediaQuery } from "react-responsive";
 import DefaultSection from "./DefaultSection";
 const Image = ({ src, alt }) => {
@@ -14,7 +13,7 @@ const Image = ({ src, alt }) => {
     };
 
     return (
-        <DefaultSection marginBottom="large">
+        <DefaultSection marginTop="" marginBottom="24px">
             <img src={src} alt={alt} style={imageStyle} />
         </DefaultSection>
     );

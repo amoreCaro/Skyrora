@@ -10,14 +10,11 @@ export default function Header() {
         // height: isMobile ? "76px" : "112px",
         backgroundColor: "#181B24",
         color: "#fff",
-
         paddingBottom: "0px",
         fontFamily: "Bai Jamjuree, sans-serif",
         display: "flex",
         justifyContent: "center",
-
-
-        padding: isMobile ? "24px 8px 16px 8px" : "20px 32px 8px",
+        padding: isMobile ? "24px 8px 16px 8px" : "40px 32px",
     };
 
     const headerContainer = {
@@ -27,7 +24,7 @@ export default function Header() {
         flexDirection: "row",
         maxWidth: isMobile ? "304px" : "640px",
         width: "100%",
-        paddingBottom: isMobile ? "0px" : "24px"
+        paddingBottom: isMobile ? "0px" : "0"
     }
 
     return (

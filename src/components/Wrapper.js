@@ -1,6 +1,12 @@
-export default function Wrapper({ children, maxWidth = "640px", margin = "0 auto", backgroundColor = "red" }) {
+const wrapperStyle = {
+    maxWidth: "100%",
+    margin: "0 auto",
+    backgroundColor: "#181B24"
+};
+
+export default function Wrapper({ children }) {
     return (
-        <div style={{ maxWidth, margin, backgroundColor }}>
+        <div style={wrapperStyle}>
             {children}
         </div>
     );
