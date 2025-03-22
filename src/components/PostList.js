@@ -11,17 +11,11 @@ import DefaultSection from "./DefaultSection";
 export default function PostList() {
   const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
 
-  // const buttonWrapper = {
-  //   marginTop: isMobile ? "26px" : "0px",
-  //   textAlign: "center", // Центрування кнопки
-  // };
-
   const container = {
     maxWidth: "640px",
     backgroundColor: "#fff",
-    padding: isMobile ? "16px 12px" : "24px 48px",
-    // display: "flex",
-    // justifyContent: "center",
+    padding: isMobile ? "0px 12px" : "24px 48px",
+
   };
 
   const content = {
@@ -54,11 +48,12 @@ export default function PostList() {
               Volodymyr Levykin,<br />
               CEO Skyrora
             </Paragraph>
-            <Divider />
           </div>
         </Container>
       </DefaultSection>
-
+      <Container style={container}>
+        <Divider />
+      </Container>
       <DefaultSection marginBottom="0px">
         <Container style={container}>
           <div style={content}>
@@ -67,11 +62,12 @@ export default function PostList() {
             <Paragraph>
               In the battle against coronavirus, we have re-structured our manufacturing division and allocated engineering personnel to start producing face visors using 3D printing facilities and producing hand sanitiser according to the World Health Organisation’s Guidelines.
             </Paragraph>
-            <Divider />
           </div>
         </Container>
       </DefaultSection>
-
+      <Container style={container}>
+        <Divider />
+      </Container>
       <DefaultSection marginBottom="0px">
         <Container style={container}>
           <div style={content}>
@@ -84,13 +80,11 @@ export default function PostList() {
         </Container>
       </DefaultSection>
 
-      {/* <DefaultSection marginBottom="0px"> */}
       <Container style={container}>
-      <div style={content}>
-        <Button marginTop="20px" marginBottom="20px" />
+        <div style={content}>
+          <Button marginTop="20px" marginBottom="20px" />
         </div>
       </Container>
-      {/* </DefaultSection> */}
     </>
   );
 }
