@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "@react-email/components";
-import DefaultSection from "./DefaultSection";
+import DefaultSection from "./DefaultSection/DefaultSection";
 import { useMediaQuery } from "react-responsive";
 import Paragraph from "./Paragrph/Paragraph";
 import Heading from "./Heading/Heading";

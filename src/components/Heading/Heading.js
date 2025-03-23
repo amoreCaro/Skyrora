@@ -1,11 +1,11 @@
 import React from "react";
-import DefaultSection from "../DefaultSection";
+import DefaultSection from "../DefaultSection/DefaultSection";
 
-export default function Heading({ 
-  headingType: Tag = "h1", 
-  children, 
-  marginBottom = "0px", 
-  marginTop = "0px" 
+export default function Heading({
+  headingType: Tag = "h1",
+  children,
+  marginBottom = "0px",
+  marginTop = "0px"
 }) {
   const styles = {
     h1: {
@@ -29,7 +29,7 @@ export default function Heading({
   };
 
   return (
-    <DefaultSection marginBottom={marginBottom} marginTop={marginTop}>
+    <DefaultSection marginTop="0px" marginBottom="16px" >
       <Tag style={{ ...styles[Tag], marginBottom, marginTop }}>
         {children}
       </Tag>

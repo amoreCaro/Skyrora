@@ -1,6 +1,6 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
-import DefaultSection from "./DefaultSection"; // Імпортуємо DefaultSection
+import DefaultSection from "./DefaultSection/DefaultSection"; // Імпортуємо DefaultSection
 
 export default function Divider({ style = {} }) {
     const isMobile = useMediaQuery({ query: "(max-width: 320px)" });

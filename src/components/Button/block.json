@@ -1,0 +1,31 @@
+{
+    "apiVersion": 3,
+    "title": "Button Block",
+    "name": "app/button-block",
+    "category": "design",
+    "icon": "button",
+    "keywords": ["button", "cta", "click"],
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./editor.css",
+    "attributes": {
+        "buttonText": {
+            "type": "string",
+            "default": "Click Me"
+        },
+        "buttonUrl": {
+            "type": "string",
+            "default": "#"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#164BDC"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#FFFFFF"
+        }
+    },
+    "supports": {
+        "html": false
+    }
+}

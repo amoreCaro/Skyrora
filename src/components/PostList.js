@@ -1,12 +1,12 @@
 import React from "react";
 import { Container } from "@react-email/components";
 import { useMediaQuery } from "react-responsive";
-import Image from "./Image";
-import Button from "./Button";
+import Image from "./Image/Image";
+import Button from "./Button/Button.js";
 import Divider from "./Divider";
 import Heading from "./Heading/Heading";
 import Paragraph from "./Paragrph/Paragraph";
-import DefaultSection from "./DefaultSection";
+import DefaultSection from "./DefaultSection/DefaultSection";
 
 export default function PostList() {
   const isMobile = useMediaQuery({ query: "(max-width: 320px)" });

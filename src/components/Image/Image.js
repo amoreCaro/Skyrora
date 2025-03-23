@@ -1,5 +1,5 @@
 import { useMediaQuery } from "react-responsive";
-import DefaultSection from "./DefaultSection";
+import DefaultSection from "../DefaultSection/DefaultSection";
 const Image = ({ src, alt }) => {
     const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
 

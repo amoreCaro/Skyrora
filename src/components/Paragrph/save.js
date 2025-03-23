@@ -1,11 +1,11 @@
-import { defaultSection } from './defaultSection';
+import { DefaultSection } from '../DefaultSection/DefaultSection';
 
 export default function save({ attributes }) {
     const { paragraph } = attributes;
 
     return (
-        <div style={defaultSection(8,4)}> 
+        <DefaultSection marginTop="0px" marginBottom="16px"> 
             {paragraph && <h1 dangerouslySetInnerHTML={{ __html: paragraph }} />} 
-        </div>
+        </DefaultSection>
     );
 }

@@ -1,0 +1,28 @@
+{
+    "apiVersion": 3,
+    "title": "Image Block",
+    "name": "app/image-block",
+    "category": "media",
+    "icon": "format-image",
+    "keywords": ["image", "media", "photo"],
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./editor.css",
+    "attributes": {
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "altText": {
+            "type": "string",
+            "default": "Image description"
+        },
+        "caption": {
+            "type": "string",
+            "source": "html",
+            "default": "Caption text"
+        }
+    },
+    "supports": {
+        "html": false
+    }
+}

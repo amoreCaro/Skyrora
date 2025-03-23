@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import DefaultSection from "./DefaultSection";
+import DefaultSection from "../DefaultSection/DefaultSection";
 
 const Button = ({ marginTop = "0px", marginBottom = "0px" }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
