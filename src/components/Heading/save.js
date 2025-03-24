@@ -1,12 +1,16 @@
-import { DefaultSection } from '../DefaultSection/DefaultSection';
+import React from 'react';
+import DefaultSection from '../DefaultSection/DefaultSection';
 
-export default function save({ attributes }) {
-    const { heading } = attributes;
+export default function Save({ attributes }) {
+    if (!attributes) return null;
+
+    const { heading, headingType, marginBottom, marginTop } = attributes;
 
     return (
-        // margin-bottom 8px on desktop, 4px on mobile
-        <DefaultSection style={marginBottom = "16px"}>
-            {heading && <h1 dangerouslySetInnerHTML={{ __html: heading }} />}
+        <DefaultSection style={{ marginBottom, marginTop }}>
+            {heading && React.createElement(headingType || 'h2', {
+                dangerouslySetInnerHTML: { __html: heading },
+            })}
         </DefaultSection>
     );
 }

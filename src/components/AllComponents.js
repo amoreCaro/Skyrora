@@ -7,8 +7,10 @@ import Divider from "./Divider";
 import Heading from "./Heading/Heading";
 import Paragraph from "./Paragrph/Paragraph";
 import DefaultSection from "./DefaultSection/DefaultSection";
+import { getField } from "./getField/getField";
 
-export default function PostList() {
+export default function AllComponents() {
+  
   const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
 
   const containerStyle = {
@@ -55,6 +57,9 @@ export default function PostList() {
 
   return (
     <>
+    {getField('heading', 'h1', attributes?.title, setAttributes)}
+
+    {/* attributes.title path to file; setAttributes save file  */}
       {posts.map((post, index) => (
         <React.Fragment key={index}>
           <DefaultSection marginBottom="0px">
@@ -78,11 +83,11 @@ export default function PostList() {
         </React.Fragment>
       ))}
 
-      <Container style={containerStyle}>
+      {/* <Container style={containerStyle}> */}
         <div style={contentStyle}>
           <Button marginTop="20px" marginBottom="20px" />
         </div>
-      </Container>
+      {/* </Container> */}
     </>
   );
 }

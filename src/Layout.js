@@ -3,7 +3,7 @@ import "./App.css";
 import Wrapper from "./components/Wrapper"; 
 import Header from "./components/Header";
 import TitleSection from "./components/TitleSection";
-import PostList from "./components/PostList";
+import AllComponents from "./components/AllComponents";
 import Footer from "./components/Footer"; 
 
 export default function Layout() {
@@ -12,7 +12,7 @@ export default function Layout() {
       {/* max width 640px, mobile 304px use const mobile */}
       <Header />
       <TitleSection />
-      <PostList />
+      <AllComponents />
       <Footer />
     </Wrapper>
   );

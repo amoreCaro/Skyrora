@@ -1,6 +1,6 @@
 {
     "apiVersion": 3,
-    "title": "Heading",
+    "title": "heading",
     "name": "app/heading",
     "category": "advanced",
     "icon": "star-filled",
@@ -12,6 +12,19 @@
             "type": "string",
             "source": "html",
             "default": "Text Test"
+        },
+        "headingType": {
+            "type": "string",
+            "default": "h2",
+            "enum": ["h1", "h2", "h3"]
+        },
+        "marginBottom": {
+            "type": "string",
+            "default": "0px"
+        },
+        "marginTop": {
+            "type": "string",
+            "default": "0px"
         }
     },
     "supports": {
