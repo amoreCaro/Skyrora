@@ -1,16 +1,20 @@
-import { TextControl } from '@wordpress/components';
-import { useState } from '@wordpress/element';
-import { MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
-import { Button } from '@wordpress/components';
+import { useMediaQuery } from "react-responsive";
+import DefaultSection from "../DefaultSection/DefaultSection";
 
-export default function Edit({ attributes, setAttributes }) {
-    const { imageUrl, altText, caption } = attributes;
+export default function Edit({ attributes }) {
+    const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
+    const { imageUrl, altText } = attributes;
 
-
+    const imageStyle = {
+        objectFit: "cover",
+        width: "100%",
+        maxWidth: isMobile ? "280px" : "544px",
+        height: isMobile ? "147px" : "285px",
+    };
 
     return (
-        <DefaultSection>
-            
+        <DefaultSection marginBottom="24px">
+            <img src={imageUrl} alt={altText} style={imageStyle} />
         </DefaultSection>
     );
 }

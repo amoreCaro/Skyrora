@@ -51,6 +51,8 @@ export default function AllComponents({ attributes, setAttributes }) {
     <>
       {getField("heading", "h1", "Skyrora newsletter. Quarter 2-4, 2024 in review", setAttributes)}
       {getField("paragraph", "p", "A close look at the work carried out by Skyrora over the last few months", setAttributes)}
+      
+      {getField("Image", "image", { imageUrl: "images/image-1.png", altText: "A beautiful image" }, setAttributes)}
       {getField("heading", "h1", "A letter from our ceo", setAttributes)}
       {getField("paragraph", "p", "Dear Skyrora!", setAttributes)}
       {getField("paragraph", "p", "As we bid farewell to another year, I am reminded of the extraordinary challenges we have faced and overcome together. Whether in the UK or Ukraine, each of you has shown remarkable courage, resilience, and dedication.", setAttributes)}
@@ -60,10 +62,13 @@ export default function AllComponents({ attributes, setAttributes }) {
       {getField("paragraph", "p", "With gratitude and respect,", setAttributes)}
       {getField("paragraph", "p", " Volodymyr Levykin", setAttributes)}
       {getField("paragraph", "p", "CEO Skyrora", setAttributes)}
-      
-      {getField("heading", "h1", "First stage tank progress ", setAttributes)}
+
+      {getField("Image", "image", { imageUrl: "images/image-2.png", altText: "A beautiful image" }, setAttributes)}
+      {getField("heading", "h1", "First stage tank progress", setAttributes)}
       {getField("paragraph", "p", "In the battle against coronavirus, we have re-structured our manufacturing division and allocated engineering personnel to start producing face visors using 3D printing facilities and producing hand sanitiser according to the World Health Organisation’s Guidelines.", setAttributes)}
 
+
+      {getField("Image", "image", { imageUrl: "images/image-3.png", altText: "A beautiful image" }, setAttributes)}
       {getField("heading", "h1", "Engine testing and facility upgrades", setAttributes)}
       {getField("paragraph", "p", "In the battle against coronavirus, we have re-structured our manufacturing division and allocated engineering personnel to start producing face visors using 3D printing facilities and producing hand sanitiser according to the World Health Organisation’s Guidelines.", setAttributes)}
       {getField("button", "button", "More news", setAttributes)}
