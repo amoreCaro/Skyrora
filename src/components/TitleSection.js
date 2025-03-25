@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "@react-email/components";
 import DefaultSection from "./DefaultSection/DefaultSection";
 import { useMediaQuery } from "react-responsive";
-import Paragraph from "./Paragrph/Paragraph";
+import Paragraph from "./Paragraph/Paragraph";
 import Heading from "./Heading/Heading";
 
 export default function TitleSection() {

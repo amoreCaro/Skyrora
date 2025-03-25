@@ -5,12 +5,11 @@ import Image from "./Image/Image";
 import Button from "./Button/Button.js";
 import Divider from "./Divider";
 import Heading from "./Heading/Heading";
-import Paragraph from "./Paragrph/Paragraph";
+import Paragraph from "./Paragraph/Paragraph";
 import DefaultSection from "./DefaultSection/DefaultSection";
 import { getField } from "./getField/getField";
 
-export default function AllComponents() {
-  
+export default function AllComponents({ attributes, setAttributes }) {
   const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
 
   const containerStyle = {
@@ -57,12 +56,11 @@ export default function AllComponents() {
 
   return (
     <>
-    {getField('heading', 'h1', attributes?.title, setAttributes)}
+      {getField("heading", "h1", attributes?.heading || "hello", setAttributes)}
 
-    {/* attributes.title path to file; setAttributes save file  */}
       {posts.map((post, index) => (
         <React.Fragment key={index}>
-          <DefaultSection marginBottom="0px">
+          <DefaultSection marginTop="0px" marginBottom="0px">
             <Container style={containerStyle}>
               <div style={contentStyle}>
                 <Image src={post.image} alt="Post image" />
@@ -83,11 +81,11 @@ export default function AllComponents() {
         </React.Fragment>
       ))}
 
-      {/* <Container style={containerStyle}> */}
+      <Container style={containerStyle}>
         <div style={contentStyle}>
           <Button marginTop="20px" marginBottom="20px" />
         </div>
-      {/* </Container> */}
+      </Container>
     </>
   );
 }
