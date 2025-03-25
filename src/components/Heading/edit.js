@@ -1,4 +1,6 @@
-import { TextControl, SelectControl } from "@wordpress/components";
+import { TextControl, SelectControl } from "@wordpress/components";  
+// TextControl - text input field for user input 
+// SelectControl - field allowing users to choose from predefined options
 import { useState } from "@wordpress/element";
 
 export default function Edit({ attributes, setAttributes }) {
@@ -6,7 +8,7 @@ export default function Edit({ attributes, setAttributes }) {
     const [headingValue, setHeadingValue] = useState(heading || "");
 
     return (
-        <div style={{ marginTop, marginBottom }}>
+        <DefaultSection style={{ marginTop, marginBottom }}>
             <TextControl
                 label="Heading"
                 value={headingValue}
@@ -28,6 +30,6 @@ export default function Edit({ attributes, setAttributes }) {
                 ]}
                 onChange={(value) => setAttributes({ headingType: value })}
             />
-        </div>
+        </DefaultSection>
     );
 }

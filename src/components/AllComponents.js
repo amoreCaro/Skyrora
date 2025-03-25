@@ -56,7 +56,7 @@ export default function AllComponents({ attributes, setAttributes }) {
 
   return (
     <>
-      {getField("heading", "h1", attributes?.heading || "hello", setAttributes)}
+   {getField("heading", "Мій заголовок", setAttributes, "h2")}
 
       {posts.map((post, index) => (
         <React.Fragment key={index}>

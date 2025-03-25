@@ -1,7 +1,7 @@
 import React from 'react';
 import DefaultSection from '../DefaultSection/DefaultSection';
 
-export default function Save({ attributes }) {
+ export default function Save({ attributes }) {
     if (!attributes) return null;
 
     const { heading, headingType, marginBottom, marginTop } = attributes;
