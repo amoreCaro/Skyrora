@@ -10,7 +10,8 @@ import { useMediaQuery } from "react-responsive";
 export default function Layout() {
   const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
   const containerStyle = {
-    maxWidth: "640px",
+    maxWidth: "544px",
+    width:"100%",
     backgroundColor: "#fff",
     padding: isMobile ? "0px 12px" : "22px 48px",
     margin: "0 auto",
@@ -19,8 +20,6 @@ export default function Layout() {
 
   return (
     <Wrapper>
-
-      {/* max width 640px, mobile 304px use const mobile */}
       <Header />
 
       <div style={containerStyle}>

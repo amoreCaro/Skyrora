@@ -1,15 +1,15 @@
 import React from "react";
-// import { useMediaQuery } from "react-responsive";
+import { useMediaQuery } from "react-responsive";
 import { getField } from "./getField/getField";
 
 export default function AllComponents({ attributes, setAttributes }) {
-  // const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
 
-  // const containerStyle = {
-  //   maxWidth: "640px",
-  //   backgroundColor: "#fff",
-  //   padding: isMobile ? "0px 12px" : "22px 48px",
-  // };
+  const containerStyle = {
+    maxWidth: "640px",
+    backgroundColor: "#fff",
+    padding: isMobile ? "0px 12px" : "22px 48px",
+  };
 
   // const contentStyle = {
   //   maxWidth: "544px",
@@ -48,7 +48,7 @@ export default function AllComponents({ attributes, setAttributes }) {
   // ];
 
   return (
-    <>
+    <div class="containerStyle">
       {getField("heading", "h1", "Skyrora newsletter. Quarter 2-4, 2024 in review", setAttributes)}
       {getField("paragraph", "p", "A close look at the work carried out by Skyrora over the last few months", setAttributes)}
       
@@ -72,6 +72,6 @@ export default function AllComponents({ attributes, setAttributes }) {
       {getField("heading", "h1", "Engine testing and facility upgrades", setAttributes)}
       {getField("paragraph", "p", "In the battle against coronavirus, we have re-structured our manufacturing division and allocated engineering personnel to start producing face visors using 3D printing facilities and producing hand sanitiser according to the World Health Organisation’s Guidelines.", setAttributes)}
       {getField("button", "button", "More news", setAttributes)}
-    </>
+    </div>
   );
 }
