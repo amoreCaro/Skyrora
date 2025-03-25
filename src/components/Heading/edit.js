@@ -1,35 +1,37 @@
-import { TextControl, SelectControl } from "@wordpress/components";  
-// TextControl - text input field for user input 
-// SelectControl - field allowing users to choose from predefined options
-import { useState } from "@wordpress/element";
+// import { TextControl } from '@wordpress/components';
+import DefaultSection from "../DefaultSection/DefaultSection";
 
-export default function Edit({ attributes, setAttributes }) {
-    const { heading, headingType, marginBottom, marginTop } = attributes;
-    const [headingValue, setHeadingValue] = useState(heading || "");
-
+export const Text = ({ value, index, setAttributes }) => {
+    const styles = {
+        h1: {
+            fontFamily: "Bai Jamjuree, sans-serif",
+            color: "#0E0F17",
+            fontWeight: "700",
+            fontSize: "26px",
+            lineHeight: "120%",
+            textTransform: "uppercase",
+            margin: "0px",
+        },
+        h3: {
+            fontFamily: "Bai Jamjuree, sans-serif",
+            color: "#181B24",
+            fontWeight: "700",
+            fontSize: "21px",
+            lineHeight: "120%",
+            textTransform: "uppercase",
+            margin: "0px",
+        },
+    };
     return (
-        <DefaultSection style={{ marginTop, marginBottom }}>
-            <TextControl
-                label="Heading"
-                value={headingValue}
-                onChange={(value) => {
-                    setHeadingValue(value);
-                    setAttributes({ heading: value });
-                }}
-            />
-            <SelectControl
-                label="Heading Type"
-                value={headingType || "h2"}
-                options={[
-                    { label: "H1", value: "h1" },
-                    { label: "H2", value: "h2" },
-                    { label: "H3", value: "h3" },
-                    { label: "H4", value: "h4" },
-                    { label: "H5", value: "h5" },
-                    { label: "H6", value: "h6" }
-                ]}
-                onChange={(value) => setAttributes({ headingType: value })}
-            />
+
+        // <TextControl
+        //     label={index}
+        //     value={value}
+        //     className="form-control form-text"
+        //     onChange={(newValue) => setAttributes({ [index]: newValue })}
+        // />
+        <DefaultSection>
+            <h2 style={styles}>{value}</h2>
         </DefaultSection>
     );
-}
+};
