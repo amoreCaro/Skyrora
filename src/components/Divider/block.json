@@ -1,0 +1,16 @@
+{
+    "apiVersion": 3,
+    "title": "divider Block",
+    "name": "app/divider-block",
+    "category": "design",
+    "icon": "divider",
+    "keywords": ["divider", "cta", "click"],
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./editor.css",
+    "attributes": {
+        
+    },
+    "supports": {
+        "html": false
+    }
+}
