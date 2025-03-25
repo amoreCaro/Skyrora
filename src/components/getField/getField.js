@@ -3,10 +3,11 @@ import Paragraph from "../Paragraph/Paragraph";
 import Button from "../Button/Button";
 import Image from "../Image/Image";
 import Divider from "../Divider/Divider";
-export const getField = (type, index, value, setAttributes) => {
+
+export const getField = (type, index, value, setAttributes, headingType = "h2") => {
     switch (type) {
         case "heading":
-            return <Heading index={index} setAttributes={setAttributes}>{value}</Heading>;
+            return <Heading index={index} setAttributes={setAttributes} headingType={headingType}>{value}</Heading>;
         case "paragraph":
             return <Paragraph index={index} setAttributes={setAttributes}>{value}</Paragraph>;
         case "button":
@@ -19,4 +20,3 @@ export const getField = (type, index, value, setAttributes) => {
             return null;
     }
 };
-
