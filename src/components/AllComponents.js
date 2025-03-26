@@ -14,7 +14,7 @@ export default function AllComponents({ attributes, setAttributes }) {
   return (
     <div class={containerStyle}>
       {/* Title Section */}
-      {getField("heading", 1, "Skyrora newsletter. Quarter 2-4, 2024 in review", setAttributes, "h1", "12px", "24px", "12px")}
+      {getField("heading", 1, "Skyrora newsletter. Quarter 2-4, 2024 in review", setAttributes, "h1", "12px", "26px", "12px")}
       {getField("paragraph", 1, "A close look at the work carried out by Skyrora over the last few months", setAttributes, undefined, "18px", "0px", "44px")}
       {/* Item_1 */}
       {getField("Image", "image", { imageUrl: "images/image-1.png", altText: "A beautiful image" }, setAttributes)}

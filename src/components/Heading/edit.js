@@ -1,13 +1,17 @@
 import { TextControl, SelectControl } from '@wordpress/components';
 import DefaultSection from "../DefaultSection/DefaultSection";
+import { useMediaQuery } from "react-responsive";
+
+
 
 export const Text = ({ value, index, headingTag, setAttributes }) => {
+    const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
     const styles = {
         h1: {
             fontFamily: "Bai Jamjuree, sans-serif",
             color: "#0E0F17",
             fontWeight: "700",
-            fontSize: "26px",
+            fontSize: isMobile ? "21px" : "26px",
             lineHeight: "120%",
             textTransform: "uppercase",
             margin: "0px",
@@ -17,6 +21,7 @@ export const Text = ({ value, index, headingTag, setAttributes }) => {
             color: "#14161D",
             fontWeight: "700",
             fontSize: "24px",
+
             lineHeight: "120%",
             textTransform: "uppercase",
             margin: "0px",
@@ -25,7 +30,7 @@ export const Text = ({ value, index, headingTag, setAttributes }) => {
             fontFamily: "Bai Jamjuree, sans-serif",
             color: "#181B24",
             fontWeight: "700",
-            fontSize: "21px",
+            fontSize: isMobile ? "16px" : "21px",
             lineHeight: "120%",
             textTransform: "uppercase",
             margin: "0px",
