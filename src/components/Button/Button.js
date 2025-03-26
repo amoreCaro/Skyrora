@@ -7,9 +7,11 @@ const Button = ({ marginTop = "0px", marginBottom = "0px" }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const buttonStyle = {
-    all: "unset", // Resets all default styles
-    display: "inline-block", // Ensures it behaves like a button
-    textDecoration: "none", // Removes underline
+    all: "unset",
+    display: "flex", // Використовуємо flexbox
+    justifyContent: "center", // Центрує текст по горизонталі
+    alignItems: "center", // Центрує текст по вертикалі
+    textDecoration: "none",
     textAlign: "center",
     backgroundColor: isHovered ? "#0F3BAA" : "#164BDC",
     color: "#FFFFFF",
@@ -18,11 +20,11 @@ const Button = ({ marginTop = "0px", marginBottom = "0px" }) => {
     height: isMobile ? "48px" : "56px",
     border: "none",
     fontSize: "16px",
-    lineHeight: "140%",
     textTransform: "uppercase",
     cursor: "pointer",
     transition: "background-color 0.3s ease, transform 0.2s ease",
-};
+  };
+  
 
 
   return (

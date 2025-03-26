@@ -9,6 +9,7 @@ const Image = ({ imageUrl, altText }) => {
         width: "100%",
         maxWidth: isMobile ? "280px" : "544px",
         height: isMobile ? "147px" : "285px",
+        // height: "100%"
     };
 
     return (
