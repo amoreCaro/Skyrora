@@ -9,8 +9,8 @@ export const Paragraph = ({ value, index, setAttributes }) => {
             fontWeight: "400",
             fontSize: "18px",
             lineHeight: "150%",
-            // fontSize: isMobile ? "16px" : "18px",
-            // lineHeight: isMobile ? "100%" : "150%",
+            fontSize: isMobile ? "16px" : "18px",
+            lineHeight: isMobile ? "100%" : "150%",
             marginBottom: "0px",
         },
     };

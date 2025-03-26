@@ -1,7 +1,7 @@
 import { TextControl, SelectControl } from '@wordpress/components';
 import DefaultSection from "../DefaultSection/DefaultSection";
 
-export const Text = ({ value, index, headingType, setAttributes }) => {
+export const Text = ({ value, index, headingTag, setAttributes }) => {
     const styles = {
         h1: {
             fontFamily: "Bai Jamjuree, sans-serif",
@@ -37,14 +37,14 @@ export const Text = ({ value, index, headingType, setAttributes }) => {
     return (
         <DefaultSection>
             <SelectControl
-                label="Heading Type"
-                value={headingType}
+                label="Heading Tag"
+                value={headingTag}
                 options={[
                     { label: "H1", value: "h1" },
                     { label: "H2", value: "h2" },
                     { label: "H3", value: "h3" },
                 ]}
-                onChange={(newType) => setAttributes({ headingType: newType })}
+                onChange={(newType) => setAttributes({ headingTag: newTag })}
             />
             <HeadingTag style={styles[HeadingTag]}>{value}</HeadingTag>
         </DefaultSection>

@@ -6,7 +6,7 @@ function DefaultSection({ children, marginTop, marginBottom }) {
 
   const defaultSection = {
     marginTop: marginTop || "0px",
-    marginBottom: marginBottom || "24px", 
+    marginBottom: marginBottom || "24px",
   };
 
   return <div style={defaultSection}>{children}</div>;

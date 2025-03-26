@@ -2,10 +2,10 @@ import React from "react";
 import DefaultSection from "../DefaultSection/DefaultSection";
 
 export default function Heading({
-  headingType = "h2",
+  headingTag = "h2",
   children,
-  marginBottom = "0px",
-  marginTop = "0px"
+  marginTop = "0px",   // Default marginTop is 0px
+  marginBottom = "0px" // Default marginBottom is 0px
 }) {
   const styles = {
     h1: {
@@ -37,13 +37,11 @@ export default function Heading({
     },
   };
 
-  const Tag = headingType;
-
-  // Ensure styles fallback if headingType is not one of the predefined ones
-  const appliedStyles = styles[Tag] || styles.h2; // Default to h2 if invalid tag
+  const Tag = headingTag;
+  const appliedStyles = styles[Tag] || styles.h2;
 
   return (
-    <DefaultSection marginTop="0px" marginBottom="16px">
+    <DefaultSection marginTop={marginTop} marginBottom={marginBottom}>
       <Tag style={{ ...appliedStyles, marginBottom, marginTop }}>
         {children}
       </Tag>
