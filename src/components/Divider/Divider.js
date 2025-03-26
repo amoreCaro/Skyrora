@@ -12,7 +12,7 @@ export default function Divider({ color = "#B8BDCC", style = {} }) {
         display: "block",
         margin: "0 auto",
         transform: "translateY(50%)",
-        padding: "32px 0px",
+        padding: "24px 0px",
         ...style,
     };
 
