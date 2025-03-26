@@ -5,7 +5,7 @@ import { useMediaQuery } from "react-responsive";
 
 
 export const Text = ({ value, index, headingTag, setAttributes }) => {
-    const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
+    const isMobile = useMediaQuery({ query: "(max-width: 430px)" });
     const styles = {
         h1: {
             fontFamily: "Bai Jamjuree, sans-serif",

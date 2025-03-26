@@ -3,7 +3,7 @@ import Media from "./Media";
 import Menu from "./Menu";
 import { useMediaQuery } from "react-responsive";
 const Footer = () => {
-    const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
+    const isMobile = useMediaQuery({ query: "(max-width: 430px)" });
     const footer = {
         backgroundColor: "#181B24",
         color: "#fff",

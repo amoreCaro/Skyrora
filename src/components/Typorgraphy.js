@@ -4,7 +4,7 @@ import  DefaultSection  from "./DefaultSection";
 
 export default function Typography({ variant = "p", children, style = {} }) {
     const Tag = variant;
-    const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
+    const isMobile = useMediaQuery({ query: "(max-width: 430px)" });
 
     const ref = useRef(null);
     const [position, setPosition] = useState("");

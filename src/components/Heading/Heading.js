@@ -8,7 +8,7 @@ export default function Heading({
   marginTop = "0px",   // Default marginTop is 0px
   marginBottom = "0px" // Default marginBottom is 0px
 }) {
-  const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 430px)" });
   const styles = {
     h1: {
 

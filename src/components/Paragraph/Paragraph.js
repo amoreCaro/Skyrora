@@ -11,7 +11,7 @@ export default function Paragraph({
   fontSizeMobile = "14px", // Default fontSize for mobile = 14px
   isSubtitle = false, // Default value for isSubtitle
 }) {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" }); // Check for mobile screens
+  const isMobile = useMediaQuery({ query: "(max-width: 430px)" }); // Check for mobile screens
 
   // Logic to adjust font size based on whether it's a subtitle or not
   const finalFontSize = isSubtitle
@@ -28,7 +28,7 @@ export default function Paragraph({
       color: "#0E0F17",
       fontWeight: "400",
       fontSize: finalFontSize,
-      lineHeight: isMobile ? "100%" : "150%",
+      lineHeight: "150%",
       marginBottom: "0px",
     }
   };

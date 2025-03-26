@@ -1,7 +1,7 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 const Menu = () => {
-    const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
+    const isMobile = useMediaQuery({ query: "(max-width: 430px)" });
     const menuItems = [
         { id: 1, text: "terms of use", link: "/#" },
         { id: 2, text: "privacy policy", link: "/#" },

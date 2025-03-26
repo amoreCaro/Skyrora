@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import HeaderInfo from "./HeaderInfo";
 
 export default function Header() {
-    const isMobile = useMediaQuery({ maxWidth: 320 });
+    const isMobile = useMediaQuery({ maxWidth: 430 });
 
     const header = {
         // height: isMobile ? "76px" : "112px",
@@ -23,7 +23,7 @@ export default function Header() {
         alignItems: "center",
         justifyContent: "space-between",
         flexDirection: "row",
-        maxWidth: isMobile ? "304px" : "640px",
+        maxWidth: "640px",
         width: "100%",
         paddingBottom: isMobile ? "0px" : "0"
     }

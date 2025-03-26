@@ -3,14 +3,14 @@ import { useMediaQuery } from "react-responsive";
 import { getField } from "./getField/getField";
 
 export default function AllComponents({ attributes, setAttributes }) {
-  const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 430px)" });
 
   const containerStyle = {
     maxWidth: "640px",
     backgroundColor: "#fff",
     padding: isMobile ? "0px 12px" : "22px 48px",
   };
-  const marginValue = window.innerWidth < 768 ? "0px" : "24px";
+  const marginValue = window.innerWidth < 430 ? "0px" : "24px";
 
 
   return (
@@ -18,10 +18,6 @@ export default function AllComponents({ attributes, setAttributes }) {
       {/* Title Section */}
       {getField("heading", 1, "Skyrora newsletter. Quarter 2-4, 2024 in review", setAttributes, "h1", marginValue, marginValue)}
       {getField("paragraph", 1, "A close look at the work carried out by Skyrora over the last few months", setAttributes, undefined, "", "18px", "30px", "40px", true)}
-
-
-
-
 
       {/* {getField("paragraph", 1, "A close look at the work carried out by Skyrora over the last few months", setAttributes, undefined, "18px", "16px", "0px", "40px")} */}
 

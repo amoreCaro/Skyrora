@@ -8,10 +8,10 @@ import Footer from "./components/Footer";
 import { useMediaQuery } from "react-responsive";
 
 export default function Layout() {
-  const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 430px)" });
   const containerStyle = {
-    maxWidth: isMobile ? "280px" : "544px",
-    width: "100%",
+    maxWidth: isMobile ? "100%" : "544px",
+
     backgroundColor: "#fff",
     padding: isMobile ? "32px 12px 48px 12px" : "22px 48px",
     margin: "0 auto",
@@ -19,10 +19,10 @@ export default function Layout() {
   };
 
   return (
-    <Wrapper>
+    <Wrapper >
       <Header />
 
-      <div style={containerStyle}>
+      <div style={containerStyle} id="container">
         <AllComponents />
       </div>
       <Footer />

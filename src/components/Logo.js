@@ -1,7 +1,7 @@
 import { useMediaQuery } from "react-responsive";
 
 const Logo = () => {
-    const isMobile = useMediaQuery({ maxWidth: 320 });
+    const isMobile = useMediaQuery({ maxWidth: 430 });
 
     const logo = {
         maxWidth: isMobile ? "84px" : "114px",

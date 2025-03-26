@@ -6,10 +6,10 @@ import Paragraph from "./Paragraph/Paragraph";
 import Heading from "./Heading/Heading";
 
 export default function TitleSection() {
-  const isMobile = useMediaQuery({ query: "(max-width: 320px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 430px)" });
 
   const container = {
-    maxWidth: isMobile ? "320px" : "640px",
+    maxWidth: isMobile ? "430px" : "640px",
     width: "100%",
     backgroundColor: "#fff",
     padding: isMobile ? "32px 12px 16px 12px" : "48px 48px 0px 48px",

@@ -48,14 +48,14 @@ const Media = () => {
     return (
         <div style={media}>
             {svgs.map((svg, index) => (
-                <div
+                <a
                     key={index}
                     style={mediaItem}
                     onMouseEnter={() => setHovered(index)}
                     onMouseLeave={() => setHovered(null)}
                 >
                     {React.cloneElement(svg, { style: mediaSvg(index) })}
-                </div>
+                </a>
             ))}
         </div>
     );
