@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import Image from "../Image/Image";
 import Divider from "../Divider/Divider";
 
-export const getField = (type, index, value, setAttributes, headingTag = "h2", marginTop = "0px", marginBottom = "24px") => {
+export const getField = (type, index, value, setAttributes, headingTag = "h2", fontSize="16px", marginTop = "0px", marginBottom = "24px") => {
     switch (type) {
         case "heading":
             return (
@@ -19,7 +19,7 @@ export const getField = (type, index, value, setAttributes, headingTag = "h2", m
                 </Heading>
             );
         case "paragraph":
-            return <Paragraph index={index} setAttributes={setAttributes} marginTop={marginTop} marginBottom={marginBottom}>{value}</Paragraph>;
+            return <Paragraph index={index} setAttributes={setAttributes} fontSize={fontSize} marginTop={marginTop} marginBottom={marginBottom}>{value}</Paragraph>;
         case "button":
             return <Button index={index} setAttributes={setAttributes} marginTop={marginTop} marginBottom={marginBottom}>{value}</Button>;
         case "Image":

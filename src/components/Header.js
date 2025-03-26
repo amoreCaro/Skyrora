@@ -14,7 +14,8 @@ export default function Header() {
         fontFamily: "Bai Jamjuree, sans-serif",
         display: "flex",
         justifyContent: "center",
-        padding: isMobile ? "24px 8px 16px 8px" : "40px 32px",
+        padding: isMobile ? "24px 8px 16px 8px" : "24px 32px 30px"
+        ,
     };
 
     const headerContainer = {

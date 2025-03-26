@@ -13,7 +13,7 @@ export default function Layout() {
     maxWidth: isMobile ? "280px" : "544px",
     width: "100%",
     backgroundColor: "#fff",
-    padding: isMobile ? "0px 12px" : "22px 48px",
+    padding: isMobile ? "32px 12px 48px 12px" : "22px 48px",
     margin: "0 auto",
     minHeight: "50vh"
   };
