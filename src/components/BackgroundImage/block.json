@@ -1,0 +1,16 @@
+{
+    "apiVersion": 3,
+    "title": "collage Block",
+    "name": "app/collage-block",
+    "category": "design",
+    "icon": "collage",
+    "keywords": ["collage", "cta", "click"],
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./editor.css",
+    "attributes": {
+        
+    },
+    "supports": {
+        "html": false
+    }
+}

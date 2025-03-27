@@ -5,9 +5,9 @@ import Paragraph from "../Paragraph/Paragraph";
 import List from "../List/List";
 import Button from "../Button/Button";
 import Image from "../Image/Image";
-import Collage from "../Collage/Collage";
+import BackgroundImage from "../BackgroundImage/BackgroundImage";
 import Divider from "../Divider/Divider";
-import Quote from "../Quote/Quote"; // Import the Quote component
+import Quote from "../Quote/Quote";
 
 export const getField = (
   type,
@@ -56,15 +56,17 @@ export const getField = (
       );
     case "Image":
       return <Image imageUrl={value.imageUrl} altText={value.altText} />;
+    case "backgroundImage":
+      return (
+        <BackgroundImage 
+          backgroundImage={value.imageUrl}
+        />
+      );
     case "Divider":
       return <Divider color={value.color} />;
     case "quote":
       return (
         <Quote person={value.person} position={value.position} />
-      );
-    case "collage":
-      return (
-        <Collage images={value.images} />
       );
     default:
       return null;

@@ -50,7 +50,8 @@ export default function AllComponents({ attributes, setAttributes }) {
       {getField("button", "button", "More news", setAttributes)}
       {getField("List", 1, "Item 1", setAttributes)}
       {getField("quote", 1, { person: "John Doe", position: "CEO" }, setAttributes)}
-      {getField("collage",1,{images: ["images/image-2.png", "images/image-2.png", "images/image-2.png"] },setAttributes)}
+      {/* {getField("collage", 1, { images: ["images/image-2.png", "images/image-2.png", "images/image-2.png", "images/image-2.png", "images/image-2.png", "images/image-2.png","images/image-2.png", "images/image-2.png"] }, setAttributes)} */}
+      {getField("backgroundImage", "backgroundImage", { imageUrl: "/images/image-1.png" }, setAttributes)}
 
     </div>
   );
