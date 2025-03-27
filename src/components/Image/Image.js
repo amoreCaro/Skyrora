@@ -8,8 +8,7 @@ const Image = ({ imageUrl, altText }) => {
         objectFit: "cover",
         width: "100%",
         maxWidth: isMobile ? "280px" : "544px",
-        height: isMobile ? "147px" : "285px",
-        // height: "100%"
+        height: "auto"
     };
 
     return (
