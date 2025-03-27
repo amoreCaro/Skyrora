@@ -39,8 +39,8 @@ export const getField = (
           index={index}
           setAttributes={setAttributes}
           fontSize={fontSize}
-          marginTop={marginTop}
-          marginBottom={marginBottom}
+          // marginTop={marginTop}
+          // marginBottom={marginBottom}
           isSubtitle={isSubtitle}
         >
           {value}

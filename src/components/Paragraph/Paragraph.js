@@ -6,8 +6,8 @@ import "./Paragraph.css";
 export default function Paragraph({
   children,
   tag: Tag = "p",
-  marginTop = "14px",
-  marginBottom = "40px",
+  marginTop = "12px",
+  marginBottom = "12px",
   fontSize = "16px",
   fontSizeMobile = "14px",
   isSubtitle = false,
