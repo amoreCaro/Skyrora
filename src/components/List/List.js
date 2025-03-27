@@ -9,7 +9,7 @@ export default function List({ value = "", className = "", margin = "0px 8px" })
     fontWeight: "400",
     fontSize: isMobile ? "14px" : "16px",
     lineHeight: "120%",
-    margin,
+    margin: "8px 0px",
     color: "#0E0F17",  
   };
 
