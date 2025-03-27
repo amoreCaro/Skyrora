@@ -37,6 +37,8 @@ export default function Collage({ images }) {
                                 ? "repeat(2, 1fr)" // Перший рядок - два елементи, які займають всю ширину
                                 : (isMobile ? "repeat(2, 1fr)" : "repeat(3, 1fr)"), // Інші ряди з 3 колонками
                                 gap: "8px",
+                                minHeight: "110px",
+                                height: "100%"
                         }}
                     >
                         {row.map((imgSrc, index) => (
@@ -46,7 +48,7 @@ export default function Collage({ images }) {
                                 alt={`collage-image-${rowIndex}-${index}`}
                                 style={{
                                     width: "100%",
-                                    height: rowIndex === 0 ? "168px" : "auto", // Висота для першого ряду
+                                    height: rowIndex === 0 ? "168px" : "100%", // Висота для першого ряду
                                     objectFit: "cover", // Для того щоб зображення не деформувались
                                 }}
                             />
