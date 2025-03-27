@@ -48,6 +48,9 @@ export default function AllComponents({ attributes, setAttributes }) {
       {getField("paragraph", "p", "In the battle against coronavirus, we have re-structured our manufacturing division and allocated engineering personnel to start producing face visors using 3D printing facilities and producing hand sanitiser according to the World Health Organisation’s Guidelines.", setAttributes)}
       {/* Button */}
       {getField("button", "button", "More news", setAttributes)}
+      {getField("List", 1, "Item 1", setAttributes)}
+
+
     </div>
   );
 }

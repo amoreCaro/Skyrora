@@ -1,5 +1,9 @@
+import React from "react";
+import DefaultSection from "../DefaultSection/DefaultSection";
+import { useMediaQuery } from "react-responsive";
 import Heading from "../Heading/Heading";
 import Paragraph from "../Paragraph/Paragraph";
+import List from "../List/List";
 import Button from "../Button/Button";
 import Image from "../Image/Image";
 import Divider from "../Divider/Divider";
@@ -13,7 +17,7 @@ export const getField = (
   fontSize = "16px",
   marginTop = "0px",
   marginBottom = "24px",
-  isSubtitle = false // Додаємо isSubtitle для Paragraph
+  isSubtitle = false
 ) => {
   switch (type) {
     case "heading":
@@ -36,11 +40,14 @@ export const getField = (
           fontSize={fontSize}
           marginTop={marginTop}
           marginBottom={marginBottom}
-          isSubtitle={isSubtitle} // Передаємо isSubtitle
+          isSubtitle={isSubtitle}
         >
           {value}
         </Paragraph>
       );
+    case "List":
+      return <List value={value} />;
+
     case "button":
       return (
         <Button index={index} setAttributes={setAttributes} marginTop={marginTop} marginBottom={marginBottom}>
