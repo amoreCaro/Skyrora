@@ -10,6 +10,7 @@ import Video from "../Video/Video";
 import Collage from "../Collage/Collage";
 import Divider from "../Divider/Divider";
 import Quote from "../Quote/Quote";
+import DynamicGrid from "../DynamicGrid/DynamicGrid";
 export const getField = (
   type,
   index,
@@ -65,6 +66,9 @@ export const getField = (
       return <Collage images={value.images} />;
     case "video":
       return <Video videoSrc={value.videoSrc} />;
+    case "grid":
+      return <DynamicGrid columns={value.columns}>{value.children}</DynamicGrid>;
+
     default:
       return null;
   }
