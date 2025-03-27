@@ -1,16 +1,10 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import DefaultSection from "../DefaultSection/DefaultSection"; // Імпортуємо DefaultSection
+import "./Collage.css"; // Make sure to import the CSS file
 
 export default function Collage({ images }) {
     const isMobile = useMediaQuery({ query: "(max-width: 430px)" });
-
-    // Стилі для колажу
-    const collageStyle = {
-        display: "grid",
-        gridTemplateColumns: isMobile ? "repeat(2, 1fr)" : "repeat(3, 1fr)", // 2 колонки на мобільних, 3 на великих екранах
-        gap: "8px", // Проміжок між зображеннями
-    };
 
     // Функція для розбиття масиву зображень на групи
     const getImageRows = () => {
@@ -33,7 +27,7 @@ export default function Collage({ images }) {
 
     return (
         <DefaultSection>
-            <div>
+            <div className="collage-grid"> {/* Added class here */}
                 {getImageRows().map((row, rowIndex) => (
                     <div
                         key={rowIndex}
@@ -42,7 +36,7 @@ export default function Collage({ images }) {
                             gridTemplateColumns: rowIndex === 0
                                 ? "repeat(2, 1fr)" // Перший рядок - два елементи, які займають всю ширину
                                 : (isMobile ? "repeat(2, 1fr)" : "repeat(3, 1fr)"), // Інші ряди з 3 колонками
-                            gap: "8px",
+                                gap: "8px",
                         }}
                     >
                         {row.map((imgSrc, index) => (

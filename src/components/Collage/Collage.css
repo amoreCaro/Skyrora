@@ -1,0 +1,4 @@
+.collage-grid {
+    display: grid;
+    gap: 8px; /* Gap between both rows and columns */
+}
