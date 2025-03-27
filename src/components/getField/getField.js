@@ -5,6 +5,7 @@ import Paragraph from "../Paragraph/Paragraph";
 import List from "../List/List";
 import Button from "../Button/Button";
 import Image from "../Image/Image";
+import Collage from "../Collage/Collage";
 import Divider from "../Divider/Divider";
 import Quote from "../Quote/Quote"; // Import the Quote component
 
@@ -60,6 +61,10 @@ export const getField = (
     case "quote":
       return (
         <Quote person={value.person} position={value.position} />
+      );
+    case "collage":
+      return (
+        <Collage images={value.images} />
       );
     default:
       return null;
