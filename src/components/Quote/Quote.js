@@ -16,9 +16,10 @@ export default function Quote({ person, position }) {
     position: {
       fontWeight: 400,
       fontSize: '14px',
-      lineHeight: '120%',
+      lineHeight: '100%',
       color: '#9FA3AF',
       textTransform: 'capitalize',
+      margin: "4px 0px 0px 0px"
     },
     QuoteLine: {
       position: "absolute",
@@ -27,6 +28,9 @@ export default function Quote({ person, position }) {
       height: "100%",
       width: "2px",
       backgroundColor: "#164BDC",
+    },
+    textContainer: {
+      marginLeft: '12px', 
     }
   };
 
@@ -34,8 +38,11 @@ export default function Quote({ person, position }) {
     <DefaultSection>
       <div style={{ position: 'relative' }}>
         <div style={styles.QuoteLine}></div>
-        <p style={styles.person}>{person}</p>
-        <span style={styles.position}>{position}</span>
+        
+        <div style={styles.textContainer}>
+          <span style={styles.person}>{person}</span>
+          <p style={styles.position}>{position}</p>
+        </div>
       </div>
     </DefaultSection>
   );
