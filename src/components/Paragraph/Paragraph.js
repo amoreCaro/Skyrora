@@ -1,27 +1,26 @@
 import React from "react";
 import DefaultSection from "../DefaultSection/DefaultSection";
 import { useMediaQuery } from "react-responsive";
-import "./Paragraph.css"; // Підключаємо CSS для стилів
+import "./Paragraph.css";
 
 export default function Paragraph({
   children,
-  tag: Tag = "p", // Default tag is <p>
-  marginTop = "14px", // Default marginTop = 14px
-  marginBottom = "40px", // Default marginBottom = 40px
-  fontSize = "16px", // Default fontSize for desktop = 16px
-  fontSizeMobile = "14px", // Default fontSize for mobile = 14px
-  isSubtitle = false, // Default value for isSubtitle
+  tag: Tag = "p",
+  marginTop = "14px",
+  marginBottom = "40px",
+  fontSize = "16px",
+  fontSizeMobile = "14px",
+  isSubtitle = false,
 }) {
-  const isMobile = useMediaQuery({ query: "(max-width: 430px)" }); // Check for mobile screens
+  const isMobile = useMediaQuery({ query: "(max-width: 430px)" });
 
-  // Logic to adjust font size based on whether it's a subtitle or not
   const finalFontSize = isSubtitle
     ? isMobile
-      ? "16px" // 16px on mobile for subtitle
-      : "18px" // 18px on desktop for subtitle
+      ? "16px"
+      : "18px"
     : isMobile
-    ? fontSizeMobile // Use the mobile font size if it's not a subtitle
-    : fontSize; // Use the default font size for desktop
+    ? fontSizeMobile
+    : fontSize;
 
   const styles = {
     p: {
@@ -34,7 +33,6 @@ export default function Paragraph({
     },
   };
 
-  // Обробка передачі HTML через dangerouslySetInnerHTML
   const createMarkup = (htmlContent) => ({ __html: htmlContent });
 
   return (

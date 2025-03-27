@@ -6,9 +6,9 @@ import List from "../List/List";
 import Button from "../Button/Button";
 import Image from "../Image/Image";
 import BackgroundImage from "../BackgroundImage/BackgroundImage";
+import Collage from "../Collage/Collage";
 import Divider from "../Divider/Divider";
 import Quote from "../Quote/Quote";
-
 export const getField = (
   type,
   index,
@@ -68,7 +68,10 @@ export const getField = (
       return (
         <Quote person={value.person} position={value.position} />
       );
+    case "collage":
+      return <Collage images={value.images} />;
     default:
       return null;
   }
 };
+
