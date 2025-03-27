@@ -49,7 +49,7 @@ export default function AllComponents({ attributes, setAttributes }) {
       {/* Button */}
       {getField("button", "button", "More news", setAttributes)}
       {getField("List", 1, "Item 1", setAttributes)}
-
+      {getField("quote", 1, { person: "John Doe", position: "CEO" }, setAttributes)}
 
     </div>
   );

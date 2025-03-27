@@ -1,12 +1,12 @@
 import React from "react";
 import DefaultSection from "../DefaultSection/DefaultSection";
-import { useMediaQuery } from "react-responsive";
 import Heading from "../Heading/Heading";
 import Paragraph from "../Paragraph/Paragraph";
 import List from "../List/List";
 import Button from "../Button/Button";
 import Image from "../Image/Image";
 import Divider from "../Divider/Divider";
+import Quote from "../Quote/Quote"; // Import the Quote component
 
 export const getField = (
   type,
@@ -47,7 +47,6 @@ export const getField = (
       );
     case "List":
       return <List value={value} />;
-
     case "button":
       return (
         <Button index={index} setAttributes={setAttributes} marginTop={marginTop} marginBottom={marginBottom}>
@@ -58,6 +57,10 @@ export const getField = (
       return <Image imageUrl={value.imageUrl} altText={value.altText} />;
     case "Divider":
       return <Divider color={value.color} />;
+    case "quote":
+      return (
+        <Quote person={value.person} position={value.position} />
+      );
     default:
       return null;
   }
