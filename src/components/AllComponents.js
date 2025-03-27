@@ -59,6 +59,8 @@ export default function AllComponents({ attributes, setAttributes }) {
       {getField("quote", 1, { person: "John Doe", position: "CEO" }, setAttributes)}
       {getField("collage", 1, { images: ["images/collage-1.png", "images/collage-2.png", "images/collage-3.png", "images/collage-4.png", "images/collage-5.png", "images/collage-6.png","images/collage-7.png", "images/collage-8.png"] }, setAttributes)}
       {getField("backgroundImage", "backgroundImage", { imageUrl: "/images/image-1.png" }, setAttributes)}
+      {getField("video", 1, { videoSrc: "https://example.com/video.mp4" }, setAttributes)}
+
     </div>
 
   );
