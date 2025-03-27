@@ -22,7 +22,7 @@ export default function AllComponents({ attributes, setAttributes }) {
       <div class={containerStyle}>
         {/* Title Section */}
         {getField("heading", 1, "Skyrora newsletter. Quarter 2-4, 2024 in review", setAttributes, "h1", marginValue, marginValue)}
-        {getField("paragraph", 1, "A close look at the work carried out by Skyrora over the last few months", setAttributes, undefined, "", "18px", "30px", "40px", true)}
+        {getField("paragraph", 1, "<a>A close look at the</a> work carried out by Skyrora over the last few months", setAttributes, undefined, "", "18px", "30px", "40px", true)}
 
         {/* {getField("paragraph", 1, "A close look at the work carried out by Skyrora over the last few months", setAttributes, undefined, "18px", "16px", "0px", "40px")} */}
 

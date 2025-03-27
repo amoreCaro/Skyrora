@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import DefaultSection from "../DefaultSection/DefaultSection";
 import { useMediaQuery } from "react-responsive";
+import "./Paragraph.css"; // Підключаємо CSS для стилів
 
 export default function Paragraph({
   children,
@@ -30,14 +31,15 @@ export default function Paragraph({
       fontSize: finalFontSize,
       lineHeight: "150%",
       marginBottom: "0px",
-    }
+    },
   };
+
+  // Обробка передачі HTML через dangerouslySetInnerHTML
+  const createMarkup = (htmlContent) => ({ __html: htmlContent });
 
   return (
     <DefaultSection marginTop={marginTop} marginBottom={marginBottom}>
-      <Tag style={{ ...styles.p, marginTop, marginBottom }}>
-        {children}
-      </Tag>
+      <Tag className="paragraph" style={{ ...styles.p, marginTop, marginBottom }} dangerouslySetInnerHTML={createMarkup(children)} />
     </DefaultSection>
   );
 }
